@@ -37,7 +37,7 @@ public interface Localized {
     String choose_Yes = "y";
     String choose_No = "n";
     String choose_Update = "u";
-    String choose_Delete = "n";
+    String choose_Delete = "d";
 
     String report_Format = "%-15s|%-10s|%-5d\n\n";
 }
