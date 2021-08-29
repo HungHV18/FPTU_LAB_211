@@ -39,4 +39,5 @@ public interface Localized {
     String choose_Update = "u";
     String choose_Delete = "n";
 
+    String report_Format = "%-15s|%-10s|%-5d\n\n";
 }

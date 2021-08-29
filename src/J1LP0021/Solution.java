@@ -136,7 +136,7 @@ public class Solution implements Localized {
         for (String key : keySet) {
             String studentName = key.substring(key.indexOf("|") + 1, key.lastIndexOf("|"));
             String courseName = key.substring(key.lastIndexOf("|") + 1);
-            System.out.printf("%-15s|%-10s|%-5d\n\n", studentName, courseName, duplicate_Student.get(key));
+            System.out.printf(report_Format, studentName, courseName, duplicate_Student.get(key));
         }
     }
 
