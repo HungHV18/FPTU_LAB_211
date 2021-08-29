@@ -28,4 +28,15 @@ public interface Localized {
     String input_Message_Update_Or_Delete = "Do you want to update (U) or delete (D) student?";
     String error_Message_Search = "Student not found!";
 
+    String[] all_Course_Name = {"Java", ".Net", "C", "C++"};
+    String option_1 = "1";
+    String option_2 = "2";
+    String option_3 = "3";
+    String option_4 = "4";
+    String option_5 = "5";
+    String choose_Yes = "y";
+    String choose_No = "n";
+    String choose_Update = "u";
+    String choose_Delete = "n";
+
 }

@@ -46,29 +46,15 @@ class Student implements Localized, Comparable<Student> {
         this.semester = semester;
     }
 
-    public void set_Course_Name(String courseName) {
-        switch (courseName) {
-            case "Java":
-            case "java":
-                this.courseName = "Java";
-                break;
-            case ".Net":
-            case ".net":
-                this.courseName = ".Net";
-                break;
-            case "C":
-            case "c":
-                this.courseName = "C";
-                break;
-            case "C++":
-            case "c++":
-                this.courseName = "C++";
-                break;
-            default: {
-                System.out.println(error_Message_courseName);
-                create_Course_Name();
+    public void set_Course_Name(String course_Name_Input) {
+        for(String courseName : all_Course_Name){
+            if(course_Name_Input.toLowerCase().equals(courseName.toLowerCase())){
+                this.courseName = courseName;
+                return;
             }
         }
+        System.out.println(error_Message_courseName);
+        create_Course_Name();
     }
 
     public String get_ID() {

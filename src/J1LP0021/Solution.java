@@ -12,19 +12,19 @@ public class Solution implements Localized {
         boolean exitProgram = false;
         while (exitProgram == false) {
             switch (showMenu()) {
-                case "1":
+                case option_1:
                     create_Student();
                     break;
-                case "2":
+                case option_2:
                     find_And_Sort();
                     break;
-                case "3":
+                case option_3:
                     update_Or_Delete();
                     break;
-                case "4":
+                case option_4:
                     report();
                     break;
-                case "5":
+                case option_5:
                     exitProgram = true;
                     break;
                 default:
@@ -58,12 +58,10 @@ public class Solution implements Localized {
 
     public static boolean isContinue() {
         System.out.println(input_Message_Continue);
-        switch (sc.nextLine()) {
-            case "Y":
-            case "y":
+        switch (sc.nextLine().toLowerCase()) {            
+            case choose_Yes:
                 return true;
-            case "N":
-            case "n":
+            case choose_No:
                 return false;
             default:
                 return isContinue();
@@ -83,13 +81,11 @@ public class Solution implements Localized {
 
     public static void update_Or_Delete() {
         System.out.println(input_Message_Update_Or_Delete);
-        switch (sc.nextLine()) {
-            case "u":
-            case "U":
+        switch (sc.nextLine().toLowerCase()) {
+            case choose_Update:
                 update_Student();
                 break;
-            case "d":
-            case "D":
+            case choose_Delete:
                 delete_Student();
                 break;
         }
