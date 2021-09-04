@@ -1,5 +1,7 @@
 package J1LP0022;
 
+import MainProject.Localized;
+
 public class Function implements Localized {
 
     public static void create_Experience() {
@@ -32,9 +34,9 @@ public class Function implements Localized {
     public static boolean isContinue() {
         System.out.println(input_Message_Continue);
         switch (sc.nextLine().toLowerCase()) {
-            case option_Yes:
+            case choose_Yes:
                 return true;
-            case option_No:
+            case choose_No:
                 return false;
             default:
                 System.out.println(error_Message_Continue);

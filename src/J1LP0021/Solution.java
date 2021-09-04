@@ -1,6 +1,7 @@
 package J1LP0021;
 
 import java.util.*;
+import MainProject.Localized;
 
 public class Solution implements Localized {
 
@@ -28,7 +29,7 @@ public class Solution implements Localized {
                     exitProgram = true;
                     break;
                 default:
-                    System.out.println(user_Manual_Menu);
+                    System.out.println(user_Manual_Menu_J1LP0021);
             }
         }
     }
@@ -40,7 +41,7 @@ public class Solution implements Localized {
         System.out.println(menu_Option_3);
         System.out.println(menu_Option_4);
         System.out.println(menu_Option_5);
-        System.out.println(user_Manual_Menu);
+        System.out.println(user_Manual_Menu_J1LP0021);
         return sc.nextLine();
     }
 
@@ -64,6 +65,7 @@ public class Solution implements Localized {
             case choose_No:
                 return false;
             default:
+                System.out.println(error_Message_Continue);
                 return isContinue();
         }
     }

@@ -1,6 +1,6 @@
 package J1LP0022;
 
-class Intern extends Candidates {
+public class Intern extends Candidates {
 
     private String majors;
     private String semester;

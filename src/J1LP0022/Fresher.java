@@ -1,6 +1,6 @@
 package J1LP0022;
 
-class Fresher extends Candidates {
+public class Fresher extends Candidates {
 
     private String graduation_date;
     private String graduation_rank;

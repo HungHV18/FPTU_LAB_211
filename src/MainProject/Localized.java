@@ -1,10 +1,49 @@
-package J1LP0022;
+package MainProject;
 
+import J1LP0021.Student;
+import J1LP0022.Experience;
+import J1LP0022.Fresher;
+import J1LP0022.Intern;
 import java.util.*;
 
-interface Localized {
-
+public interface Localized {
     Scanner sc = new Scanner(System.in);
+
+    // ---------------------------J1LP0021-------------------------------------
+    ArrayList<Student> allStudent = new ArrayList<>();
+    
+    String input_Message_ID = "ID Student: ";
+    String input_Message_Name = "Name of student: ";
+    String input_Message_Semester = "Semester: ";
+    String input_Message_Course = "Course name: ";
+    String error_Message_courseName = "There are only three courses: Java, .Net, C, C++";
+
+    String welcome_Message = "WELCOME TO STUDENT MANAGEMENT";   
+    String menu_Option_1 = "1. Create";
+    String menu_Option_2 = "2. Find and Sort";
+    String menu_Option_3 = "3. Update/Delete";
+    String menu_Option_4 = "4. Report";
+    String menu_Option_5 = "5. Exit";
+    String user_Manual_Menu_J1LP0021 = "Please choose 1 to Create, 2 to Find and Sort, 3 to Update/Delete, 4 to Report and 5 to Exit program\n";
+    
+    String next_Student_Message = "\nNext Student: ";
+    String input_Message_Continue = "Do you want to continue (Y/N)?";
+    String input_Message_Search = "Search name student: ";
+    String input_Message_Update_Or_Delete = "Do you want to update (U) or delete (D) student?";
+    String error_Message_Search = "Not found!";
+
+    String[] all_Course_Name = {"Java", ".Net", "C", "C++"};
+
+    String choose_Yes = "y";
+    String choose_No = "n";
+    String choose_Update = "u";
+    String choose_Delete = "d";
+
+    String report_Format = "%-15s|%-10s|%-5d\n\n";    
+    
+    
+    // ---------------------------J1LP0022-------------------------------------
+    
     String[] all_candidatesType = {"0", "1", "2"};
 
     ArrayList<Experience> all_Experience = new ArrayList<>();
@@ -23,7 +62,7 @@ interface Localized {
     String option_3 = "3.	Internship";
     String option_4 = "4.	Searching";
     String option_5 = "5.	Exit";
-    String user_Manual_Menu = "Please choose 1 to Create Experience Candidate, 2 to Create Fresher Candidate, 3 to Internship Candidate, 4 to Searching and 5 to Exit program";
+    String user_Manual_Menu_J1LP0022 = "Please choose 1 to Create Experience Candidate, 2 to Create Fresher Candidate, 3 to Internship Candidate, 4 to Searching and 5 to Exit program";
 
     String content_ShowExperienceName = "===========EXPERIENCE CANDIDATE============";
     String content_ShowFresherName = "==========FRESHER CANDIDATE==============";
@@ -32,9 +71,6 @@ interface Localized {
     String input_Message_CandidateName = "Input Candidate name (First name or Last name): ";
     String input_Message_TypeOfCandidate = "Input type of candidate: ";
     
-    String input_Message_Continue = "Do you want to continue (Y/N)?. ";
-    String option_Yes = "y";
-    String option_No = "n";
     String error_Message_Continue = "Chooses Y to continues, N to return main screen";
     
     int length_birthDate = 4;
@@ -67,11 +103,10 @@ interface Localized {
 
     String error_Message_Graduation_rank = "Graduation rank with one of 4 values: Excellence, Good, Fair, Poor";
 
-    String input_Message_Majors = "Majors: ";
-    String input_Message_Semester = "Semester: ";
-    String input_Message_UniversityName = "University Name: ";
-
-    String error_Message_Search = "Candidate not found";
+    String input_Message_Majors = "Majors: ";    
+    String input_Message_UniversityName = "University Name: ";    
 
     String info_Format = "%-15s|%-10s|%-15s|%-15s|%-15s|%-5s\n";
+    
+    
 }

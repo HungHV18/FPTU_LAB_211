@@ -1,6 +1,6 @@
 package J1LP0022;
 
-class Experience extends Candidates {
+public class Experience extends Candidates {
 
     private String expInYear;
     private String proSkill;

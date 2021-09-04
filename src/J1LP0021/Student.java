@@ -1,7 +1,9 @@
 package J1LP0021;
 
-class Student implements Localized, Comparable<Student> {
-   
+import MainProject.Localized;
+
+public class Student implements Localized, Comparable<Student> {
+
     private String ID;
     private String studentName;
     private String semester;
@@ -47,8 +49,8 @@ class Student implements Localized, Comparable<Student> {
     }
 
     public void set_Course_Name(String course_Name_Input) {
-        for(String courseName : all_Course_Name){
-            if(course_Name_Input.toLowerCase().equals(courseName.toLowerCase())){
+        for (String courseName : all_Course_Name) {
+            if (course_Name_Input.toLowerCase().equals(courseName.toLowerCase())) {
                 this.courseName = courseName;
                 return;
             }

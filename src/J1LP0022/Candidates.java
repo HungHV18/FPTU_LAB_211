@@ -1,5 +1,7 @@
 package J1LP0022;
 
+import MainProject.Localized;
+
 class Candidates implements Localized {
 
     private String candidatesID;
