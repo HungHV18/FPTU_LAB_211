@@ -2,7 +2,7 @@ package J1LP0022;
 
 import MainProject.Localized;
 
-class Candidates implements Localized {
+class Candidates {
 
     private String candidatesID;
     private String firstName;
@@ -25,8 +25,8 @@ class Candidates implements Localized {
     }
 
     private void create_CandidateID() {
-        System.out.print(input_Message_CandidateID);
-        setCandidateID(sc.nextLine());
+        System.out.print(Localized.input_Message_CandidateID);
+        setCandidateID(Localized.sc.nextLine());
     }
 
     public void setCandidateID(String candidatesID) {
@@ -34,8 +34,8 @@ class Candidates implements Localized {
     }
 
     private void create_FirstName() {
-        System.out.print(input_Message_FirstName);
-        setFirstName(sc.nextLine());
+        System.out.print(Localized.input_Message_FirstName);
+        setFirstName(Localized.sc.nextLine());
     }
 
     public void setFirstName(String firstName) {
@@ -43,8 +43,8 @@ class Candidates implements Localized {
     }
 
     private void create_LastName() {
-        System.out.print(input_Message_LastName);
-        setLastName(sc.nextLine());
+        System.out.print(Localized.input_Message_LastName);
+        setLastName(Localized.sc.nextLine());
     }
 
     public void setLastName(String lastName) {
@@ -52,23 +52,23 @@ class Candidates implements Localized {
     }
 
     public void create_BirthDate() {
-        System.out.print(input_Message_BirthDate);
-        setBirthDate(sc.nextLine());
+        System.out.print(Localized.input_Message_BirthDate);
+        setBirthDate(Localized.sc.nextLine());
     }
 
     public void setBirthDate(String birthDate) {
         if (checkBirthDate(birthDate)) {
             this.birthDate = birthDate;
         } else {
-            System.out.println(error_Message_BirthDate);
+            System.out.println(Localized.error_Message_BirthDate);
             create_BirthDate();
         }
     }
 
     private boolean checkBirthDate(String birthDate) {
         try {
-            boolean checkLength = birthDate.length() == length_birthDate;
-            boolean checkCurrentYear = Integer.parseInt(birthDate) >= year_birthDate;
+            boolean checkLength = birthDate.length() == Localized.length_birthDate;
+            boolean checkCurrentYear = Integer.parseInt(birthDate) >= Localized.year_birthDate;
             return checkLength == true && checkCurrentYear == true;
         } catch (NumberFormatException e) {
             return false;
@@ -76,8 +76,8 @@ class Candidates implements Localized {
     }
 
     private void create_Address() {
-        System.out.print(input_Message_Address);
-        setAddress(sc.nextLine());
+        System.out.print(Localized.input_Message_Address);
+        setAddress(Localized.sc.nextLine());
     }
 
     public void setAddress(String address) {
@@ -85,15 +85,15 @@ class Candidates implements Localized {
     }
 
     private void create_Phone() {
-        System.out.print(input_Message_Phone);
-        setPhone(sc.nextLine());
+        System.out.print(Localized.input_Message_Phone);
+        setPhone(Localized.sc.nextLine());
     }
 
     public void setPhone(String phone) {
         if (checkPhone(phone)) {
             this.phone = phone;
         } else {
-            System.out.println(error_Message_Phone);
+            System.out.println(Localized.error_Message_Phone);
             create_Phone();
         }
     }
@@ -108,21 +108,21 @@ class Candidates implements Localized {
     }
 
     private void create_Email() {
-        System.out.print(input_Message_Email);
-        setEmail(sc.nextLine());
+        System.out.print(Localized.input_Message_Email);
+        setEmail(Localized.sc.nextLine());
     }
 
     public void setEmail(String email) {
         if (checkEmail(email)) {
             this.email = email;
         } else {
-            System.out.println(error_Message_Email);
+            System.out.println(Localized.error_Message_Email);
             create_Email();
         }
     }
 
     private boolean checkEmail(String email) {
-        for (String domain : domainEmail) {
+        for (String domain : Localized.domainEmail) {
             if (email.indexOf(domain) == (email.length() - domain.length())) {
                 return true;
             }
@@ -136,7 +136,7 @@ class Candidates implements Localized {
 
     public void getInfomation() {
         String name = getFirstName() + " " + getLastName();
-        System.out.printf(info_Format, name, getBirthDate(), getAddress(), getPhone(), getEmail(), getCandidatesType());
+        System.out.printf(Localized.info_Format, name, getBirthDate(), getAddress(), getPhone(), getEmail(), getCandidatesType());
     }
 
     public String getCandidateID() {

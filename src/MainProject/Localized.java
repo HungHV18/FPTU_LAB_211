@@ -7,6 +7,7 @@ import J1LP0022.Intern;
 import java.util.*;
 
 public interface Localized {
+    
     Scanner sc = new Scanner(System.in);
 
     // ---------------------------J1LP0021-------------------------------------

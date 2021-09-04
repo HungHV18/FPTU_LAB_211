@@ -2,7 +2,7 @@ package J1LP0022;
 
 import MainProject.Localized;
 
-public class Solution implements Localized {
+public class Solution {
 
     public static void run_J1LP0022() {
         choose_Option_Menu();
@@ -12,35 +12,35 @@ public class Solution implements Localized {
         boolean exitProgram = false;
         while (exitProgram == false) {
             switch (showMenu()) {
-                case number_Of_Option_1:
+                case Localized.number_Of_Option_1:
                     Function.create_Experience();
                     break;
-                case number_Of_Option_2:
+                case Localized.number_Of_Option_2:
                     Function.create_Fresher();
                     break;
-                case number_Of_Option_3:
+                case Localized.number_Of_Option_3:
                     Function.create_Intern();
                     break;
-                case number_Of_Option_4:
+                case Localized.number_Of_Option_4:
                     Function.searching();
                     break;
-                case number_Of_Option_5:
+                case Localized.number_Of_Option_5:
                     exitProgram = true;
                     break;
                 default:
-                    System.out.println(user_Manual_Menu_J1LP0022);
+                    System.out.println(Localized.user_Manual_Menu_J1LP0022);
             }
         }
     }
 
     public static String showMenu() {
-        System.out.println(contentMenu);
-        System.out.println(option_1);
-        System.out.println(option_2);
-        System.out.println(option_3);
-        System.out.println(option_4);
-        System.out.println(option_5);
-        System.out.println(user_Manual_Menu_J1LP0022);
-        return sc.nextLine();
+        System.out.println(Localized.contentMenu);
+        System.out.println(Localized.option_1);
+        System.out.println(Localized.option_2);
+        System.out.println(Localized.option_3);
+        System.out.println(Localized.option_4);
+        System.out.println(Localized.option_5);
+        System.out.println(Localized.user_Manual_Menu_J1LP0022);
+        return Localized.sc.nextLine();
     }
 }
