@@ -1,7 +1,9 @@
 package J1LP0021;
 
-class Student implements Localized, Comparable<Student> {
-   
+import MainProject.Localized;
+
+public class Student implements Comparable<Student> {
+
     private String ID;
     private String studentName;
     private String semester;
@@ -15,23 +17,23 @@ class Student implements Localized, Comparable<Student> {
     }
 
     public void create_ID() {
-        System.out.print(input_Message_ID);
-        set_ID(sc.nextLine());
+        System.out.print(Localized.input_Message_ID);
+        set_ID(Localized.sc.nextLine());
     }
 
     public void create_Student_Name() {
-        System.out.print(input_Message_Name);
-        set_Student_Name(sc.nextLine());
+        System.out.print(Localized.input_Message_Name);
+        set_Student_Name(Localized.sc.nextLine());
     }
 
     public void create_Semester() {
-        System.out.print(input_Message_Semester);
-        set_Semester(sc.nextLine());
+        System.out.print(Localized.input_Message_Semester);
+        set_Semester(Localized.sc.nextLine());
     }
 
     public void create_Course_Name() {
-        System.out.print(input_Message_Course);
-        set_Course_Name(sc.nextLine());
+        System.out.print(Localized.input_Message_Course);
+        set_Course_Name(Localized.sc.nextLine());
     }
 
     public void set_ID(String ID) {
@@ -47,13 +49,13 @@ class Student implements Localized, Comparable<Student> {
     }
 
     public void set_Course_Name(String course_Name_Input) {
-        for(String courseName : all_Course_Name){
-            if(course_Name_Input.toLowerCase().equals(courseName.toLowerCase())){
+        for (String courseName : Localized.all_Course_Name) {
+            if (course_Name_Input.toLowerCase().equals(courseName.toLowerCase())) {
                 this.courseName = courseName;
                 return;
             }
         }
-        System.out.println(error_Message_courseName);
+        System.out.println(Localized.error_Message_courseName);
         create_Course_Name();
     }
 
